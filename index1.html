@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Stomatologiya Markazi — Doktor Alisher Karimov</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&family=Fraunces:opsz,wght@9..144,600;9..144,800&display=swap" rel="stylesheet">
+<style>
+:root{--bg1:#e9fbf7;--bg2:#e4eeff;--ink:#0b2540;--mut:#4f647b;--glass:rgba(255,255,255,.55);--bd:rgba(255,255,255,.8);--in:rgba(255,255,255,.75);--a:#14b8a6;--b:#3b82f6;--c:#8b5cf6;--sh:0 20px 50px rgba(30,70,120,.16);--err:#e11d48;--blob:.55;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg1:#05121d;--bg2:#0b1b3d;--ink:#eaf4ff;--mut:#9db3cc;--glass:rgba(16,34,60,.55);--bd:rgba(255,255,255,.12);--in:rgba(255,255,255,.07);--sh:0 20px 50px rgba(0,0,0,.5);--err:#fb7185;--blob:.4}}
+:root[data-theme="dark"]{--bg1:#05121d;--bg2:#0b1b3d;--ink:#eaf4ff;--mut:#9db3cc;--glass:rgba(16,34,60,.55);--bd:rgba(255,255,255,.12);--in:rgba(255,255,255,.07);--sh:0 20px 50px rgba(0,0,0,.5);--err:#fb7185;--blob:.4}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 84px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;min-height:100vh;font-family:Manrope,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:linear-gradient(135deg,var(--bg1),var(--bg2));line-height:1.6;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--glass);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px)}
+.bg{position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none}
+.bg i{position:absolute;border-radius:50%;filter:blur(80px);opacity:var(--blob);animation:drift 20s ease-in-out infinite alternate}
+.bg i:nth-child(1){width:46vmax;height:46vmax;left:-12vmax;top:-10vmax;background:var(--a)}
+.bg i:nth-child(2){width:40vmax;height:40vmax;right:-10vmax;top:18vh;background:var(--b);animation-duration:26s;animation-delay:-6s}
+.bg i:nth-child(3){width:34vmax;height:34vmax;left:25vw;bottom:-14vmax;background:var(--c);animation-duration:23s;animation-delay:-11s}
+@keyframes drift{to{transform:translate(8vw,6vh) scale(1.18)}}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid var(--b);outline-offset:3px;border-radius:10px}
+.wrap{width:min(1160px,100% - 32px);margin-inline:auto}
+.glass{background:var(--glass);border:1px solid var(--bd);border-radius:28px;box-shadow:var(--sh);-webkit-backdrop-filter:blur(22px) saturate(160%);backdrop-filter:blur(22px) saturate(160%)}
+svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+
+/* header */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;margin-top:12px}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:10px 14px 10px 12px;border-radius:22px}
+.brand{display:flex;align-items:center;gap:12px;perspective:700px}
+.logo{width:48px;height:48px;border-radius:15px;display:grid;place-items:center;font-size:28px;color:#fff;background:linear-gradient(135deg,var(--a),var(--b) 55%,var(--c));box-shadow:inset 0 0 0 1px rgba(255,255,255,.45),0 0 22px rgba(20,184,166,.7),0 0 46px rgba(59,130,246,.45);animation:neon 3s ease-in-out infinite alternate;transition:transform .9s cubic-bezier(.2,.8,.2,1)}
+.brand:hover .logo{transform:rotateY(360deg) scale(1.1)}
+@keyframes neon{to{box-shadow:inset 0 0 0 1px rgba(255,255,255,.6),0 0 30px rgba(20,184,166,.95),0 0 64px rgba(139,92,246,.6)}}
+.brand-t{transform-style:preserve-3d;transition:transform .5s;line-height:1.15}
+.brand-t small{display:block;color:var(--mut);font-size:.78rem;font-weight:600}
+.brand-t b{font-family:Fraunces,Georgia,serif;font-size:1.18rem;font-weight:800}
+.brand:hover .brand-t{transform:rotateX(-10deg) rotateY(9deg) translateZ(14px)}
+.brand:hover .brand-t b{text-shadow:1px 1px 0 var(--a),2px 2px 0 var(--b),4px 5px 10px rgba(0,0,0,.25)}
+nav{display:flex;gap:6px}
+nav a{padding:8px 14px;border-radius:12px;font-weight:600;font-size:.95rem;color:var(--mut);transition:.25s}
+nav a:hover{background:var(--in);color:var(--ink)}
+.tools{display:flex;align-items:center;gap:10px}
+.ico-btn{width:42px;height:42px;border-radius:13px;border:1px solid var(--bd);background:var(--in);color:var(--ink);font-size:20px;display:grid;place-items:center;cursor:pointer;transition:.25s}
+.ico-btn:hover{transform:translateY(-2px) rotate(-8deg)}
+
+/* buttons */
+.btn{position:relative;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 24px;border-radius:16px;border:0;font:700 1rem Manrope,system-ui,sans-serif;color:#fff;cursor:pointer;background:linear-gradient(135deg,var(--a),var(--b));box-shadow:0 10px 28px rgba(20,184,166,.4);transition:transform .25s,box-shadow .25s}
+.btn::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,transparent 30%,rgba(255,255,255,.55) 50%,transparent 70%);transform:translateX(-120%);animation:shine 3.5s infinite}
+@keyframes shine{40%,100%{transform:translateX(120%)}}
+.btn:hover{transform:translateY(-3px);box-shadow:0 16px 36px rgba(59,130,246,.5)}
+.btn.ghost{background:var(--in);color:var(--ink);border:1px solid var(--bd);box-shadow:none}
+.btn.ghost::after{display:none}
+.pulse{animation:pulse 2.2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(20,184,166,.6)}70%{box-shadow:0 0 0 20px rgba(20,184,166,0)}100%{box-shadow:0 0 0 0 rgba(20,184,166,0)}}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:center;padding:70px 0 40px}
+.hero h1{font-family:Fraunces,Georgia,serif;font-weight:800;font-size:clamp(2.3rem,5.4vw,4.2rem);line-height:1.08;margin:0 0 18px;letter-spacing:-.02em}
+.hero p{max-width:52ch;color:var(--mut);font-size:1.1rem;margin:0 0 28px}
+.cta{display:flex;flex-wrap:wrap;gap:14px}
+.stats{display:flex;flex-wrap:wrap;gap:26px;margin-top:38px}
+.stats b{display:block;font-family:Fraunces,Georgia,serif;font-size:2rem;line-height:1}
+.stats span{color:var(--mut);font-size:.9rem}
+.stage{perspective:900px}
+.tooth-card{position:relative;aspect-ratio:1;display:grid;place-items:center;transition:transform .15s;transform-style:preserve-3d}
+.tooth-card .big{font-size:clamp(130px,20vw,220px);color:#fff;filter:drop-shadow(0 0 28px rgba(20,184,166,.8)) drop-shadow(0 0 60px rgba(59,130,246,.6));animation:bob 5s ease-in-out infinite;transform:translateZ(60px)}
+.tooth-card .big path{stroke:url(#grad);stroke-width:1.2;fill:rgba(255,255,255,.88)}
+@keyframes bob{50%{transform:translateZ(60px) translateY(-14px) rotate(3deg)}}
+.chip-f{position:absolute;padding:9px 14px;border-radius:14px;font-weight:700;font-size:.85rem;display:flex;gap:8px;align-items:center;transform:translateZ(90px);animation:bob2 6s ease-in-out infinite}
+.chip-f.a{left:-4%;top:14%}.chip-f.b{right:-3%;bottom:16%;animation-delay:-3s}
+.chip-f svg{color:var(--a);font-size:18px}
+@keyframes bob2{50%{margin-top:-10px}}
+
+/* services */
+section{padding:56px 0}
+.sec-h{max-width:640px;margin-bottom:30px}
+.sec-h h2{font-family:Fraunces,Georgia,serif;font-size:clamp(1.8rem,3.6vw,2.6rem);line-height:1.15;margin:0 0 10px}
+.sec-h p{margin:0;color:var(--mut)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.card{--mx:50%;--my:0%;position:relative;overflow:hidden;padding:28px 24px;display:flex;flex-direction:column;gap:14px;transition:transform .45s cubic-bezier(.2,.8,.2,1),box-shadow .45s,border-color .45s}
+.card::before{content:"";position:absolute;inset:0;opacity:0;transition:opacity .4s;background:radial-gradient(320px circle at var(--mx) var(--my),rgba(20,184,166,.32),rgba(59,130,246,.14) 45%,transparent 70%);pointer-events:none}
+.card:hover{transform:translateY(-12px);border-color:var(--a);box-shadow:0 30px 60px rgba(20,184,166,.28),0 0 0 1px var(--a),0 0 40px rgba(59,130,246,.3)}
+.card:hover::before{opacity:1}
+.card .ic{width:62px;height:62px;border-radius:19px;display:grid;place-items:center;font-size:32px;color:#fff;background:linear-gradient(135deg,var(--a),var(--b));box-shadow:0 10px 24px rgba(20,184,166,.4);transition:transform .5s}
+.card:nth-child(2) .ic{background:linear-gradient(135deg,var(--b),var(--c))}
+.card:nth-child(3) .ic{background:linear-gradient(135deg,var(--c),#ec4899)}
+.card:nth-child(4) .ic{background:linear-gradient(135deg,#10b981,var(--a))}
+.card:hover .ic{transform:rotate(-8deg) scale(1.12)}
+.card h3{margin:0;font-size:1.15rem;line-height:1.3}
+.card p{margin:0;color:var(--mut);font-size:.95rem;flex:1}
+.card button{align-self:flex-start;display:inline-flex;gap:8px;align-items:center;background:none;border:0;padding:6px 0;font:700 .95rem Manrope,system-ui,sans-serif;color:var(--a);cursor:pointer}
+.card button svg{transition:transform .3s}
+.card button:hover svg{transform:translateX(5px)}
+
+/* booking */
+.book{display:grid;grid-template-columns:.8fr 1.2fr;gap:0;overflow:hidden}
+.book-info{padding:40px 34px;color:#fff;background:linear-gradient(150deg,var(--a),var(--b) 60%,var(--c));position:relative}
+.book-info h2{font-family:Fraunces,Georgia,serif;font-size:2rem;line-height:1.15;margin:0 0 14px}
+.book-info p{margin:0 0 22px;opacity:.92}
+.book-info li{list-style:none;display:flex;gap:12px;align-items:center;margin-bottom:14px;font-weight:600}
+.book-info ul{padding:0;margin:0}
+.book-info li svg{font-size:22px;padding:8px;box-sizing:content-box;border-radius:12px;background:rgba(255,255,255,.2)}
+.book-form{padding:36px 34px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.field{display:flex;flex-direction:column;gap:6px}
+.field.full{grid-column:1/-1}
+.field label,.field .lb{font-weight:700;font-size:.9rem}
+.field input,.field select,.field textarea{width:100%;padding:14px 16px;border-radius:14px;border:1.5px solid var(--bd);background:var(--in);color:var(--ink);font:500 1rem Manrope,system-ui,sans-serif;transition:.25s}
+.field select option{color:#0b2540}
+.field textarea{min-height:84px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{outline:0;border-color:var(--a);box-shadow:0 0 0 4px rgba(20,184,166,.22)}
+.field.err input,.field.err select{border-color:var(--err)}
+.msg{min-height:1.1em;font-size:.82rem;color:var(--err);font-weight:600}
+.slots{display:flex;flex-wrap:wrap;gap:8px}
+.chip input{position:absolute;opacity:0;pointer-events:none}
+.chip span{display:block;padding:10px 16px;border-radius:12px;border:1.5px solid var(--bd);background:var(--in);font-weight:700;cursor:pointer;transition:.25s}
+.chip:hover span{transform:translateY(-2px)}
+.chip input:checked+span{color:#fff;border-color:transparent;background:linear-gradient(135deg,var(--a),var(--b));box-shadow:0 8px 20px rgba(20,184,166,.4)}
+.chip input:focus-visible+span{outline:3px solid var(--b);outline-offset:2px}
+.chip input:disabled+span{opacity:.35;cursor:not-allowed;text-decoration:line-through}
+.book-form .btn{grid-column:1/-1}
+.done{grid-column:1/-1;text-align:center;padding:20px 0}
+.done .ok{width:84px;height:84px;margin:0 auto 18px;border-radius:50%;display:grid;place-items:center;font-size:44px;color:#fff;background:linear-gradient(135deg,var(--a),var(--b));animation:pop .6s cubic-bezier(.2,1.6,.4,1),pulse 2.2s 1s infinite}
+@keyframes pop{from{transform:scale(0)}}
+.done h3{font-family:Fraunces,Georgia,serif;font-size:1.7rem;margin:0 0 8px}
+.done p{color:var(--mut);margin:0 auto 22px;max-width:44ch}
+.done .cta{justify-content:center}
+
+/* contact */
+.cgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.cc{padding:28px;display:flex;flex-direction:column;gap:14px;transition:transform .4s,box-shadow .4s}
+.cc:hover{transform:translateY(-6px);box-shadow:0 26px 54px rgba(59,130,246,.25)}
+.cc h3{margin:0;font-size:1.1rem}
+.cc .big-link{font-family:Fraunces,Georgia,serif;font-size:1.55rem;font-weight:800;line-height:1.2;overflow-wrap:anywhere}
+.cc p{margin:0;color:var(--mut)}
+.soc{display:flex;flex-wrap:wrap;gap:12px}
+.soc a{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:14px;font-weight:700;color:#fff;transition:.3s}
+.soc a:hover{transform:translateY(-3px) scale(1.04)}
+.tg{background:linear-gradient(135deg,#229ed9,#1c7fc4);animation:glow 2.6s infinite alternate}
+.ig{background:linear-gradient(135deg,#f58529,#dd2a7b 55%,#8134af);animation:glow2 2.6s 1.3s infinite alternate}
+@keyframes glow{to{box-shadow:0 0 26px rgba(34,158,217,.8)}}
+@keyframes glow2{to{box-shadow:0 0 26px rgba(221,42,123,.7)}}
+.map{position:relative;height:150px;border-radius:18px;overflow:hidden;border:1px solid var(--bd);background:
+linear-gradient(115deg,transparent 46%,rgba(59,130,246,.35) 47% 50%,transparent 51%),
+linear-gradient(20deg,transparent 58%,rgba(20,184,166,.35) 59% 62%,transparent 63%),
+repeating-linear-gradient(0deg,var(--in) 0 1px,transparent 1px 26px),repeating-linear-gradient(90deg,var(--in) 0 1px,transparent 1px 26px),
+linear-gradient(135deg,rgba(20,184,166,.15),rgba(59,130,246,.15))}
+.pin{position:absolute;left:52%;top:48%;width:20px;height:20px;margin:-10px;border-radius:50%;background:linear-gradient(135deg,var(--a),var(--b));border:3px solid #fff}
+.pin::before,.pin::after{content:"";position:absolute;inset:-3px;border-radius:50%;border:2px solid var(--a);animation:ring 2.4s infinite}
+.pin::after{animation-delay:1.2s}
+@keyframes ring{from{transform:scale(1);opacity:.9}to{transform:scale(4.2);opacity:0}}
+.fab{position:fixed;right:max(18px,env(safe-area-inset-right,0px));bottom:max(18px,env(safe-area-inset-bottom,0px));z-index:30;width:60px;height:60px;border-radius:50%;display:grid;place-items:center;font-size:28px;color:#fff;background:linear-gradient(135deg,var(--a),var(--b));animation:pulse 2.2s infinite;transition:transform .3s}
+.fab:hover{transform:scale(1.12) rotate(-10deg)}
+footer{padding:30px 0 44px;text-align:center;color:var(--mut);font-size:.9rem}
+
+.js .rv{opacity:0;transform:translateY(26px);transition:opacity .8s,transform .8s}
+.js .rv.in{opacity:1;transform:none}
+
+@media(max-width:1020px){.grid{grid-template-columns:repeat(2,1fr)}.cgrid{grid-template-columns:1fr}.book{grid-template-columns:1fr}}
+@media(max-width:860px){nav{display:none}.hero{grid-template-columns:1fr;padding-top:44px}.stage{max-width:380px;margin:0 auto;width:100%}}
+@media(max-width:600px){.grid{grid-template-columns:1fr}.book-form{grid-template-columns:1fr;padding:26px 20px}.book-info{padding:30px 22px}.brand-t small{font-size:.7rem}.brand-t b{font-size:1rem}.tools .btn{display:none}section{padding:40px 0}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition-duration:.01ms!important}.js .rv{opacity:1;transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add("js")</script>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<linearGradient id="grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#14b8a6"/><stop offset=".6" stop-color="#3b82f6"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient>
+<symbol id="tooth" viewBox="0 0 24 24"><path d="M7 3C4.5 3 3 5 3 7.5c0 2 .8 3.5 1.5 5 .8 1.8.7 4 1.3 6 .3 1 1 1.5 1.7 1.5 1 0 1.3-1 1.7-2.5.4-1.5.9-2.5 1.8-2.5s1.4 1 1.8 2.5c.4 1.5.7 2.5 1.7 2.5.7 0 1.4-.5 1.7-1.5.6-2 .5-4.2 1.3-6C20.2 11 21 9.5 21 7.5 21 5 19.5 3 17 3c-1.7 0-2.7.8-5 .8S8.7 3 7 3z"/></symbol>
+<symbol id="fill" viewBox="0 0 24 24"><path d="M7 3C4.5 3 3 5 3 7.5c0 2 .8 3.5 1.5 5 .8 1.8.7 4 1.3 6 .3 1 1 1.5 1.7 1.5 1 0 1.3-1 1.7-2.5.4-1.5.9-2.5 1.8-2.5s1.4 1 1.8 2.5c.4 1.5.7 2.5 1.7 2.5.7 0 1.4-.5 1.7-1.5.6-2 .5-4.2 1.3-6C20.2 11 21 9.5 21 7.5 21 5 19.5 3 17 3c-1.7 0-2.7.8-5 .8S8.7 3 7 3z"/><path d="M12 7.5v5M9.5 10h5"/></symbol>
+<symbol id="spark" viewBox="0 0 24 24"><path d="M10 3l1.8 5.2L17 10l-5.2 1.8L10 17l-1.8-5.2L3 10l5.2-1.8zM18 14l.9 2.1L21 17l-2.1.9L18 20l-.9-2.1L15 17l2.1-.9z"/></symbol>
+<symbol id="impl" viewBox="0 0 24 24"><path d="M7 3h10a1 1 0 0 1 1 1v3.5A6 6 0 0 1 14 13H10A6 6 0 0 1 6 7.5V4a1 1 0 0 1 1-1z"/><path d="M10 13v1.5M14 13v1.5M9.5 16.5h5M10 19h4M11 21.5h2"/></symbol>
+<symbol id="shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 5-5"/></symbol>
+<symbol id="phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
+<symbol id="send" viewBox="0 0 24 24"><path d="M10 14L21 3M21 3l-6.5 18a.55.55 0 0 1-1 0L10 14l-7-3.5a.55.55 0 0 1 0-1L21 3"/></symbol>
+<symbol id="insta" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></symbol>
+<symbol id="pinic" viewBox="0 0 24 24"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+<symbol id="clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+<symbol id="check" viewBox="0 0 24 24"><path d="M5 12l4.5 4.5L19 7"/></symbol>
+<symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+<symbol id="moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z"/></symbol>
+<symbol id="gift" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M5 12v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-8M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8s2-5 4.5-5a2.5 2.5 0 0 1 0 5"/></symbol>
+</defs></svg>
+
+<div class="bg" aria-hidden="true"><i></i><i></i><i></i></div>
+
+<header>
+  <div class="wrap glass">
+    <a class="brand" href="#bosh" aria-label="Bosh sahifa">
+      <span class="logo"><svg class="i" viewBox="0 0 24 24"><use href="#tooth"/></svg></span>
+      <span class="brand-t"><small>Stomatologiya Markazi</small><b>Doktor Alisher Karimov</b></span>
+    </a>
+    <nav aria-label="Asosiy menyu"><a href="#xizmatlar">Xizmatlar</a><a href="#qabul">Qabulga yozilish</a><a href="#aloqa">Aloqa</a></nav>
+    <div class="tools">
+      <button class="ico-btn" id="theme" type="button" aria-label="Mavzuni almashtirish"><svg class="i" viewBox="0 0 24 24"><use href="#moon"/></svg></button>
+      <a class="btn pulse" href="tel:+998901234567"><svg class="i" viewBox="0 0 24 24"><use href="#phone"/></svg>Qoʻngʻiroq</a>
+    </div>
+  </div>
+</header>
+
+<main id="bosh" class="wrap">
+  <div class="hero">
+    <div>
+      <h1>Sogʻlom va ishonchli tabassum uchun zamonaviy stomatologiya</h1>
+      <p>Ogʻriqsiz davolash, aniq tashxis va har bir bemorga alohida e’tibor. Birinchi koʻrik va maslahat bepul.</p>
+      <div class="cta">
+        <a class="btn pulse" href="#qabul">Qabulga yozilish</a>
+        <a class="btn ghost" href="#xizmatlar">Xizmatlarni koʻrish</a>
+      </div>
+      <div class="stats">
+        <div><b data-n="15">0</b><span>yillik tajriba</span></div>
+        <div><b data-n="8000">0</b><span>davolangan bemor</span></div>
+        <div><b data-n="98">0</b><span>% mamnun bemorlar</span></div>
+      </div>
+    </div>
+    <div class="stage">
+      <div class="tooth-card glass" data-tilt>
+        <svg class="i big" viewBox="0 0 24 24" aria-hidden="true"><use href="#tooth"/></svg>
+        <div class="chip-f a glass"><svg class="i" viewBox="0 0 24 24"><use href="#shield"/></svg>Steril asboblar</div>
+        <div class="chip-f b glass"><svg class="i" viewBox="0 0 24 24"><use href="#spark"/></svg>Zamonaviy uskunalar</div>
+      </div>
+    </div>
+  </div>
+
+  <section id="xizmatlar">
+    <div class="sec-h rv"><h2>Xizmatlarimiz</h2><p>Kerakli xizmatni tanlang va shu zahoti qabulga yoziling.</p></div>
+    <div class="grid">
+      <article class="card glass rv"><span class="ic"><svg class="i" viewBox="0 0 24 24"><use href="#fill"/></svg></span><h3>Tishlarni davolash va plomba qoʻyish</h3><p>Ogʻriqsiz davolash, kariesni erta aniqlash va mustahkam kompozit plombalar.</p><button type="button" data-s="Tishlarni davolash va plomba qoʻyish">Yozilish<svg class="i" viewBox="0 0 24 24"><use href="#arrow"/></svg></button></article>
+      <article class="card glass rv"><span class="ic"><svg class="i" viewBox="0 0 24 24"><use href="#spark"/></svg></span><h3>Tishlarni oqartirish va estetik restavratsiya</h3><p>Professional oqartirish, vinirlar va tishning tabiiy shaklini tiklash.</p><button type="button" data-s="Tishlarni oqartirish va estetik restavratsiya">Yozilish<svg class="i" viewBox="0 0 24 24"><use href="#arrow"/></svg></button></article>
+      <article class="card glass rv"><span class="ic"><svg class="i" viewBox="0 0 24 24"><use href="#impl"/></svg></span><h3>Tish protezlari va implantatsiya</h3><p>Zamonaviy implantlar va qulay protezlar bilan chaynash va tabassumni qaytaring.</p><button type="button" data-s="Tish protezlari va implantatsiya">Yozilish<svg class="i" viewBox="0 0 24 24"><use href="#arrow"/></svg></button></article>
+      <article class="card glass rv"><span class="ic"><svg class="i" viewBox="0 0 24 24"><use href="#shield"/></svg></span><h3>Ogʻiz boʻshligʻi gigiyenasi va profilaktika</h3><p>Ultratovushli tozalash, tish toshini olib tashlash va muntazam nazorat.</p><button type="button" data-s="Ogʻiz boʻshligʻi gigiyenasi va profilaktika">Yozilish<svg class="i" viewBox="0 0 24 24"><use href="#arrow"/></svg></button></article>
+    </div>
+  </section>
+
+  <section id="qabul">
+    <div class="book glass rv">
+      <div class="book-info">
+        <h2>Qabulga onlayn yoziling</h2>
+        <p>Ism, telefon va qulay vaqtni qoldiring. Administrator qabulni tasdiqlash uchun siz bilan bogʻlanadi.</p>
+        <ul>
+          <li><svg class="i" viewBox="0 0 24 24"><use href="#clock"/></svg>Dushanba–shanba, 09:00–19:00</li>
+          <li><svg class="i" viewBox="0 0 24 24"><use href="#gift"/></svg>Birinchi maslahat bepul</li>
+          <li><svg class="i" viewBox="0 0 24 24"><use href="#shield"/></svg>Har bir bemor uchun steril asboblar</li>
+        </ul>
+      </div>
+      <form class="book-form" id="form" novalidate>
+        <div class="field" id="f-name"><label for="name">Ismingiz</label><input id="name" autocomplete="name" placeholder="Masalan, Dilnoza"><span class="msg"></span></div>
+        <div class="field" id="f-tel"><label for="tel">Telefon raqamingiz</label><input id="tel" type="tel" inputmode="tel" autocomplete="tel" placeholder="+998 90 123 45 67"><span class="msg"></span></div>
+        <div class="field full" id="f-svc"><label for="svc">Xizmat</label>
+          <select id="svc"><option value="">Xizmatni tanlang</option><option>Tishlarni davolash va plomba qoʻyish</option><option>Tishlarni oqartirish va estetik restavratsiya</option><option>Tish protezlari va implantatsiya</option><option>Ogʻiz boʻshligʻi gigiyenasi va profilaktika</option><option>Boshqa / maslahat</option></select><span class="msg"></span></div>
+        <div class="field" id="f-date"><label for="date">Kelish sanasi</label><input id="date" type="date"><span class="msg"></span></div>
+        <div class="field" id="f-time"><span class="lb">Kelish vaqti</span><div class="slots" id="slots" role="radiogroup" aria-label="Kelish vaqti"></div><span class="msg"></span></div>
+        <div class="field full"><label for="note">Izoh (ixtiyoriy)</label><textarea id="note" placeholder="Sizni nima bezovta qilmoqda?"></textarea></div>
+        <button class="btn" type="submit">Qabulga yozilish</button>
+      </form>
+    </div>
+  </section>
+
+  <section id="aloqa">
+    <div class="sec-h rv"><h2>Biz bilan bogʻlaning</h2><p>Qoʻngʻiroq qiling, yozing yoki klinikaga bevosita keling.</p></div>
+    <div class="cgrid">
+      <div class="cc glass rv"><h3>Telefon</h3><a class="big-link" href="tel:+998901234567">+998 90 123 45 67</a><p>Bosing — qoʻngʻiroq darhol boshlanadi.</p><a class="btn pulse" href="tel:+998901234567"><svg class="i" viewBox="0 0 24 24"><use href="#phone"/></svg>Hozir qoʻngʻiroq qilish</a></div>
+      <div class="cc glass rv"><h3>Ijtimoiy tarmoqlar</h3><p>Savolingizni yozing, odatda bir soat ichida javob beramiz.</p><div class="soc"><a class="tg" href="https://t.me/gh7te" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24"><use href="#send"/></svg>Telegram</a><a class="ig" href="https://instagram.com/dr.karimov.dent" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24"><use href="#insta"/></svg>Instagram</a></div></div>
+      <div class="cc glass rv"><h3>Manzil</h3><div class="map" aria-hidden="true"><span class="pin"></span></div><p>Toshkent sh., Chilonzor tumani, Bunyodkor shoh koʻchasi, 12-uy</p><a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=Tashkent+Chilonzor+Bunyodkor+12" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24"><use href="#pinic"/></svg>Xaritada ochish</a></div>
+    </div>
+  </section>
+</main>
+
+<footer>© 2026 Stomatologiya Markazi — Doktor Alisher Karimov. Barcha huquqlar himoyalangan.</footer>
+<a class="fab" href="tel:+998901234567" aria-label="Qoʻngʻiroq qilish"><svg class="i" viewBox="0 0 24 24"><use href="#phone"/></svg></a>
+
+<script>
+const TG="gh7te";
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+
+/* theme */
+$("#theme").onclick=()=>{
+  const r=document.documentElement, dark=r.dataset.theme?r.dataset.theme==="dark":matchMedia("(prefers-color-scheme:dark)").matches;
+  r.dataset.theme=dark?"light":"dark";
+};
+
+/* reveal + counters */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.15});
+$$(".rv").forEach((el,i)=>{el.style.transitionDelay=(i%4)*90+"ms";io.observe(el)});
+$$("[data-n]").forEach(el=>{
+  const n=+el.dataset.n,t0=performance.now();
+  (function f(t){const p=Math.min((t-t0)/1600,1);el.textContent=Math.round(n*(1-Math.pow(1-p,3))).toLocaleString("ru-RU");if(p<1)requestAnimationFrame(f)})(t0);
+});
+
+/* card glow follows pointer; hero tilt */
+$$(".card").forEach(c=>c.addEventListener("pointermove",e=>{const r=c.getBoundingClientRect();c.style.setProperty("--mx",e.clientX-r.left+"px");c.style.setProperty("--my",e.clientY-r.top+"px")}));
+$$("[data-tilt]").forEach(el=>{
+  el.addEventListener("pointermove",e=>{const r=el.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;el.style.transform=`rotateY(${x*18}deg) rotateX(${-y*18}deg)`});
+  el.addEventListener("pointerleave",()=>el.style.transform="");
+});
+
+/* booking form */
+const form=$("#form"),tel=$("#tel"),date=$("#date"),slots=$("#slots");
+const HOURS=["09:00","10:00","11:00","12:00","14:00","15:00","16:00","17:00","18:00"];
+const today=new Date(Date.now()-new Date().getTimezoneOffset()*6e4).toISOString().slice(0,10);
+date.min=today;
+
+function buildSlots(){
+  const isToday=date.value===today,h=new Date().getHours();
+  slots.innerHTML="";
+  HOURS.forEach(t=>{
+    const l=document.createElement("label"),i=document.createElement("input"),s=document.createElement("span");
+    l.className="chip";i.type="radio";i.name="time";i.value=t;i.disabled=isToday&&+t.slice(0,2)<=h;s.textContent=t;
+    l.append(i,s);slots.append(l);
+  });
+}
+buildSlots();date.addEventListener("change",buildSlots);
+
+function fmt(v){
+  if(v.length<4)return"+998";
+  let d=v.replace(/\D/g,"");if(d.startsWith("998"))d=d.slice(3);d=d.slice(0,9);
+  let o="+998";
+  if(d.length)o+=" "+d.slice(0,2);if(d.length>2)o+=" "+d.slice(2,5);if(d.length>5)o+=" "+d.slice(5,7);if(d.length>7)o+=" "+d.slice(7,9);
+  return o;
+}
+tel.addEventListener("focus",()=>{if(!tel.value)tel.value="+998 "});
+tel.addEventListener("input",()=>tel.value=fmt(tel.value));
+
+$$(".card button").forEach(b=>b.onclick=()=>{
+  $("#svc").value=b.dataset.s;
+  $("#qabul").scrollIntoView({behavior:"smooth"});
+  setTimeout(()=>$("#name").focus({preventScroll:true}),600);
+});
+
+function setErr(id,m){const f=$("#"+id);f.classList.toggle("err",!!m);f.querySelector(".msg").textContent=m||""}
+
+form.addEventListener("submit",e=>{
+  e.preventDefault();
+  const name=$("#name").value.trim(),svc=$("#svc").value,time=(slots.querySelector("input:checked")||{}).value;
+  const okTel=tel.value.replace(/\D/g,"").length===12;
+  setErr("f-name",name.length<2?"Ismingizni kiriting":"");
+  setErr("f-tel",okTel?"":"Raqamni toʻliq kiriting: +998 XX XXX XX XX");
+  setErr("f-svc",svc?"":"Xizmatni tanlang");
+  setErr("f-date",date.value?"":"Sanani tanlang");
+  setErr("f-time",time?"":"Qulay vaqtni tanlang");
+  if(!name||name.length<2||!okTel||!svc||!date.value||!time){const bad=$(".field.err input,.field.err select");if(bad)bad.focus();return}
+  const msg=`Assalomu alaykum! Qabulga yozilmoqchiman.\nIsm: ${name}\nTelefon: ${tel.value}\nXizmat: ${svc}\nSana: ${date.value}, ${time}`+($("#note").value.trim()?`\nIzoh: ${$("#note").value.trim()}`:"");
+  const d=document.createElement("div");d.className="done";d.setAttribute("role","status");
+  d.innerHTML='<div class="ok"><svg class="i" viewBox="0 0 24 24"><use href="#check"/></svg></div><h3></h3><p></p><div class="cta"><a class="btn" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24"><use href="#send"/></svg>Telegramda tasdiqlash</a><button class="btn ghost" type="button">Yangi ariza</button></div>';
+  d.querySelector("h3").textContent="Rahmat, "+name+"!";
+  d.querySelector("p").textContent="Arizangiz qabul qilindi: "+date.value.split("-").reverse().join(".")+", soat "+time+". Tezroq tasdiqlash uchun uni Telegram orqali ham yuborishingiz mumkin.";
+  d.querySelector("a").href="https://t.me/"+TG+"?text="+encodeURIComponent(msg);  d.querySelector("button").onclick=()=>{d.remove();[...form.children].forEach(c=>c.hidden=false);form.reset();buildSlots()};
+  [...form.children].forEach(c=>c.hidden=true);form.append(d);
+  $("#qabul").scrollIntoView({behavior:"smooth",block:"center"});
+});
+</script>
+</body>
+</html>
